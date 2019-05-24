@@ -6,6 +6,23 @@ let total = 0;
 
 
 
+/*const dice = () =>{
+    if (hitMe == 1)
+        console.log()
+    else if (hitMe == 2)
+        console.log(img2)
+    else if (hitMe == 3)
+        console.log(img2)
+    else if (hitMe == 4)
+        console.log(img2)
+    else if (hitMe == 5)
+        console.log(img2)
+    else (hitMe == 6)
+        console.log(img2)
+}*/
+
+
+
 function hitMe(){
     let rollMe = (Math.ceil(Math.random() * 6));
         console.log(rollMe);
@@ -13,13 +30,14 @@ function hitMe(){
                 total += rollMe;
             document.getElementById("Total").innerHTML=total;
      if (rollMe == 1)
-        alert ("You rolled a 1. You Lose!  :(") 
+        alert ("You rolled a 1. You Lose!  :(" ) + location.reload();
      else if (total >= 20)
-        alert ("Winner!! You scored 20+ ")
+        alert ("Winner!! You scored 20+ ") + location.reload();
      else 
-        console.log(total);
+        console.log(total)
+        document.getElementsById("Dice1").src = `./img/${rollMe}.png`
+        
 };
-
 
 
 
